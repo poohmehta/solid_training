@@ -1,0 +1,63 @@
+interface time_slot
+{
+	void markTimeSlotFree(int resourceId);
+	void markTimeSlotBusy(int resourceId);
+	void findFreeTimeSlot();
+}
+interface space_slot
+{
+	void markSpaceSlotFree(int resourceId);
+	void markSpaceSlotBusy(int resourceId);
+	void findFreeSpaceSlot();
+}
+
+class TimeSlots extends ResourceType implements time_slot
+{
+	private static final int INVALID_RESOURCE_ID = -1;
+	
+	public int allocate(ResourceType resourceType)
+	{
+		int resourceId;
+		void findFreeTimeSlot()
+		{
+			resourceId = 0;
+		}
+		void markTimeSlotBusy(int resourceId)
+		{
+		
+		}
+	}
+	public void free(ResourceType resourceType, int resourceId)
+	{	
+		void markTimeSlotFree(resourceId)
+		{
+		}
+	}
+}
+class SpaceSlots extends ResourceType implements space_slot
+{	
+	public int allocate(ResourceType resourceType)
+	{
+		int resourceId;
+		void findFreeSpaceSlot()
+		{
+			resourceId = 0;
+		}
+		void markSpaceSlotBusy(int resourceId);
+		{
+		
+		}
+	}
+	public void free(ResourceType resourceType, int resourceId)
+	{	
+		void markSpaceSlotFree(resourceId)
+		{
+		}
+	}
+}
+public abstract class ResourceType()
+{
+	public abstract int allocate(ResourceType r); 
+	public abstract void free(ResourceType r,int resourceId);
+}
+

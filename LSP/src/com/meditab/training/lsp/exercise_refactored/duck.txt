@@ -1,0 +1,26 @@
+package com.meditab.training.lsp.exercise;
+
+public class Duck
+{
+	private void swim(Duck... ducks)
+    {
+        for (Duck duck : ducks) {
+            duck.swim();
+        }
+    }
+    private void quack(Duck... ducks)
+    {
+        for (Duck duck : ducks) {
+            duck.quack();
+        }
+    }
+    public void quack()
+    {
+        System.out.println("Quack...");
+    }
+
+    public void swim()
+    {
+        System.out.println("Swim...");
+    }
+}
